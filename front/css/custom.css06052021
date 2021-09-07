@@ -1,0 +1,866 @@
+/* Add here all your CSS customizations */
+body{font-family: 'Montserrat', sans-serif!important;; font-weight:500!important; font-size:0.9em; color:#333333;}
+
+h1, h2, h3, h4, h5, h6, p, a{letter-spacing: 0em!important;}
+
+.body {background-color: #f1f1f1; }
+p{color:#333333; font-size:14px; line-height:170%;}
+ul li{color:#333333; font-size:14px; line-height:170%;}
+h3{font-weight:500;}
+
+hr {background: rgba(0, 0, 0, 0.15); border: 0; height: 1px;  margin: 0px 0px 22px 0;}
+
+
+/*body{font-family: 'Raleway', sans-serif;}*/
+#header .header-nav-top .nav > li > a, #header .header-nav-top .nav > li > span{padding: 0px 10px;}
+.rounded {border-radius: 0px !important;}
+.card-body{padding: 1rem;}
+.card {border: 0px solid rgba(0, 0, 0, 0.06); border-radius: 0rem;}
+.card-img-top{border-radius:0px;}
+
+/* CSS for zoom in/zoom out effect */
+.image-box {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    width: 100%;
+}
+.image-box img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+}
+
+/* CSS for footer starts here */
+.site-footer {background: #253a76;}
+.site-footer__main {padding: 14px 0 18px;}
+.site-footer__main p{color:#fff;}
+.widget-title{color:#fff;}
+.contact-info-item{color: rgba(255, 255, 255, .6);}
+.site-footer .contact-info {list-style: none; margin: 0; padding: 0;}
+.site-footer__copyright {color: rgba(255, 255, 255, .4) !important; font-size: 12px; text-align: center; padding: 17px 15px;background-color: #152a66;}
+.bookyourstay-mob {display: none;}
+.site-footer .widget:not(.widget_space){display: inline-block; margin: 5px 0; width: 100%;}
+.social-icons {margin-top: 8px; text-align: center; font-size: 30px; }
+.site-footer .site-footer__main a {color: rgba(255, 255, 255, .6); font-weight: 300; transition: .2s opacity;}
+.social-icons i {margin-right: 10px;}
+
+/* CSS for footer starts here */
+.panel-body{display:none;}
+.panel-body ul {margin: 0px; padding: 0px;}
+.panel-body li {list-style: none; border-bottom: 0px solid #eaeaea; padding:5px 0px; width:25%; float: left;}
+.our-presence{border-top:1px solid #bebebe;}
+
+
+/* Style the tab */
+.our-story-megamenu h3{font-size:17px; color:#253873; font-weight:700;}
+.our-story-megamenu p{font-size:12px; color:#494949; line-height: 170%;}
+
+.our-story-megamenu .tab {
+  float: left;
+  border: 0px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: auto;
+}
+
+/* Style the buttons inside the tab */
+.our-story-megamenu .tab a {
+  display: block;
+  background-color: inherit!important;
+  color: black;
+  padding: 14px 16px!important;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px!important;
+  color:#000!important;
+  text-transform: uppercase!important;
+  border-bottom:1px solid #d0d0d0!important;
+  font-weight:500!important;
+
+}
+
+.our-story-megamenu .tab a:last-child {border-bottom:0px!important;}
+
+/* Change background color of buttons on hover */
+.our-story-megamenu .tab a:hover {
+  background-color: #e7e7e7!important;
+  color:#000!important;
+  text-decoration: none!important;
+}
+
+/* Create an active/current "tab button" class */
+.tab a.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 20px 25px;
+  border: 0px solid #ccc;
+  width: 70%;
+  border-left: none;
+  /*height: 300px;*/
+  display: none;
+  background-color:#fff;
+}
+
+/*.other-tabcontent {
+  float: left;
+  padding: 20px 25px;
+  border: 0px solid #ccc;
+  width: 70%;
+  border-left: none;
+  display: none;
+  background-color:#fff;
+}*/
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.cygnett-brands-megamenu .tab {
+  float: left;
+  border: 0px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: auto;
+  padding: 45px!important;
+}
+.cygnett-brands-megamenu .tab p{font-size:16px; line-height: 150%;}
+.cygnett-brands-megamenu .other-tabcontent {
+  float: left;
+  padding: 25px;
+  border: 0px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  display: none;
+
+}
+
+.cygnett-brands-megamenu .other-tabcontent h3{font-size: 17px; color: #253873;  font-weight: 700;}
+
+.popular-destinations h4{text-transform: uppercase; font-size:1.2em; line-height: 100%; font-weight:500; color:#000;}
+.popular-destinations span{font-size:13px; line-height:100%; color:#505050;}
+.popular-destinations span.cygnett-hotel-count{line-height:150%; display:block; }
+.popular-destinations span.other-hotel-count{line-height:150%; display:block;}
+/*.popular-destinations .card{margin-bottom:15px;
+-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+}*/
+
+.cygnett-offers h4{text-transform: uppercase; font-size:1.2em; line-height: 100%; font-weight:500; color:#000;}
+.cygnett-offers span{font-size:13px; line-height:100%; color:#494949;}
+.cygnett-offers span.cygnett-hotel-count{line-height:150%; display:block;}
+.cygnett-offers span.other-hotel-count{line-height:150%; display:block;}
+/* .cygnett-offers .card-body{height:86px;}
+/*.cygnett-offers .card{margin-bottom:15px;
+-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+}*/
+
+.cygnett-happenings h4{text-transform: uppercase; font-size:1.2em; line-height: 100%; font-weight:500; color:#000;}
+.cygnett-happenings span{font-size:13px; line-height:100%; color:#505050;}
+.cygnett-happenings span.cygnett-hotel-count{line-height:150%; display:block;}
+.cygnett-happenings span.other-hotel-count{line-height:150%; display:block;}
+/*.cygnett-happenings .card{margin-bottom:15px;
+-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+}*/
+
+.cygnett-news h4 {font-size: 1.1em; line-height: 150%; font-weight: 600; color: #000;}
+.cygnett-news p{color:#000; line-height:150%;}
+
+.other-sections h2{font-weight:500;}
+.other-sections p{line-height:170%;}
+
+
+html .btn-primary {
+    background-color: #263a77;
+    border-color: #263a77 #263a77 #263a77;
+    color: #FFF;
+}
+
+html .btn-primary:hover{
+  background-color: #d1ad00;
+    border-color: #d1ad00 #d1ad00 #d1ad00;
+    color: #FFF;
+}
+
+.card-shadow{position:relative;}
+.textwidget p{color: rgba(255, 255, 255, .6);}
+
+.img_logo {background-color: rgba(255, 255, 255, 0.75); text-align: center; position: absolute; padding: 8px 9px; bottom: 25%;}
+.img_logo img {width: 24%;}
+
+
+.corporate_box {
+    padding: 4%;
+    background: url(../img/corporate-video.jpg) no-repeat;
+    background-size: cover;
+}
+
+.corporate_container {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    padding-top: 18%;
+    text-align: center;
+    min-height: 250px;
+    padding-bottom: 0%;
+}
+
+.events_box{
+  padding: 4%;
+  background-color: #b59707;
+}
+
+.events_container {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    border: 1px solid #fff;
+    padding: 4% 8%;
+    /* min-height: 350px; */
+    padding-bottom: 12%;
+}
+.events_container p {
+    color: #fff;
+    padding-top: 9%;
+    font-size: 16px;
+    /* margin-bottom: 10%; */
+    margin-bottom: 16px;
+}
+.events_container .widget-select {
+    display: block !important;
+    position: relative;
+}
+
+.events_container .event-submit {
+    display: block;
+    background-color: #253873;
+    font-weight: 400;
+    padding: 3% 0%;
+    color: #fff;
+}
+
+.awards_box {
+    /* min-height: 350px; */
+    min-height: 275px;
+    /* background: #f6f6f6; */
+    background: #253873;
+    padding: 4%;
+}
+.awards_container {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    border: 1px solid #fff;
+    padding: 4%;
+    /* min-height: 350px; */
+    min-height: 250px;
+}
+
+.awards_container p {
+    color: #fff;    
+    font-size: 16px;
+    /* margin-bottom: 10%; */
+    margin-bottom: 16px;
+}
+
+.awards_container .awards {
+    background-color: transparent;
+    padding: 2% 0%;
+}
+
+.awards .awards-img {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.awards .awards-content {
+    float: left;
+    width: 65%;
+    margin-left: 0%;
+    margin-top: 5%;
+}
+.awards_container .awards .awards-content h2 {
+    margin-bottom: 4px;
+    margin-top: 22px;
+    color: #d1ad00;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 150%;
+}
+
+.awards_container .awards .awards-content p {
+    margin-bottom: 30px;
+    color: #fff;
+    line-height: 170%;
+    font-size:12px;
+}
+
+
+/* CSS for Brand details section */
+.inner-page-pad{padding:3%;}
+.brands{padding-bottom: 190px;}
+.brands-container h3{font-size: 27px; margin-top:0px; color:#fff; font-weight:600;}
+.brands-container h4{font-size: 18px; margin-top:0px; color:#fff; font-weight:400;}
+.brands-container p {font-size: 14px; line-height: 160%; color:#fff; font-weight:400;}
+.brand-media {margin-top: -170px; padding-bottom: 60px;}
+.brand-media h3{font-size: 27px; margin-top:0px; color:#fff; font-weight:500;}
+.brand-media .card-body p{line-height:160%;}
+p.figure-large {border-color: #fff; font-style: normal; color: #fff; font-size: 60px!important; font-weight: 600; border-bottom: 1px solid #fff;
+    margin-bottom: 10px; padding-bottom: 5px; display: inline-block;}
+.video-pad{padding-bottom:3%; padding-left:3%; padding-right:3%;}
+
+  .cygnett-happenings .opening-soon{text-transform: uppercase; color:#000; font-size:16px;}
+  .content-grid-item img.brand-logo{max-width:100px!important; height:auto; }
+  .content-grid-item:hover {background-color: #f5f5f5; filter: grayscale(0%);}
+  .breadcrumb{background-color:transparent; padding:0px; color:#fff; font-size:12px;}
+  .breadcrumb a{color:#fff; }  
+  .breadcrumb-black{background-color:transparent; padding:0px; color:#000; font-size:12px;}
+  .breadcrumb-black a{color:#000; }
+
+  .hotel-listing{ position: relative; }
+  .hotel-listing .hotel-listing-footer{ position: absolute; bottom:10px; width:100%; }
+  .hotel-listing .hotel-listing-footer .listing-rate{border-top:1px solid #c7c7c7; }
+  .hotel-listing .hotel-listing-footer .listing-rate span{font-size: 12px; display:block;}
+  .hotel-listing .hotel-listing-footer .listing-rate span.listing-price{font-size: 22px; font-weight:700; line-height: 120%;}
+  .hotel-listing .hotel-listing-footer .listing-view-hotel{ border-top:1px solid #c7c7c7; }
+
+  /* Offer Listing */
+  .offer-listing .card-body{height:240px; text-align:center; border-right:1px solid #e4e4e4;}
+  .offer-listing .card{margin-bottom:15px;
+/*-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);*/
+border-right:0px solid #eeeeee;
+border-collapse:collapse;
+}
+.offer-listing h6{line-height:150%;}
+
+.offer-details{margin-top:-100px; background-color:rgba(255, 255, 255, 0.90 );}
+.offer-details h6{line-height:150%;}
+
+/*.participating-hotel-offer .card{
+-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+}*/
+
+/*.card-shadow{margin-bottom:15px;
+-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.15);
+}*/
+
+.card-shadow{
+margin-bottom:15px;  
+-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+}
+
+.cygnett-offers span.hotel-name-tag{ position: absolute; top:4%; left:0%; padding:2%; background-color:#cda829; color:#fff; font-size: 12px;
+    font-weight: 600;}
+
+  .participating-hotel-offers{border:1px solid #e7e7e7;} 
+  .img-fluid{width:100%!important;} 
+
+  #header .header-logo{margin: 0.3rem 0;}
+
+  /* Offer Details */
+  .offer-listing h3{font-weight:700; color:#263a77;}
+  .counters .counter label{font-size: 1em; color: #000; font-weight: 600; text-transform: uppercase;}
+  .counters strong{color:#d1ad00;}
+  .counters .counter p{font-size:0.8em;}
+  
+
+  /* CSS for Accordian */
+.accordion_container {width: 100%;}
+.accordion_head {background-color:#263a77; color: white; cursor: pointer; font-size: 16px; margin: 0 0 1px 0; padding: 7px 11px;}
+.accordion_body {background: #fff; padding: 15px;}
+.accordion_body p{margin: 0px;}
+.plusminus{float:right;}
+
+
+/* CSS for the Partner with Us */
+#sidebar .form-group label{color:#000; font-size:0.9em; font-weight:500; margin-bottom:0.3rem;}
+#sidebar .form-group input, #sidebar .form-group textarea{border:1px solid #c3c3c3; border-radius:0px; color:#000; font-weight:500;}
+
+/* CSS for Booking Widget */
+#sticky {width: 100vw;}
+.hero-additional {background-color: rgba(0, 0, 0, .6); position: absolute; bottom: 0; left: 0; z-index:99;}
+#bookingwidgetBEwidget .fte-bootstrap-wrapper .text-left {margin: 15px auto 0px!important;}
+.fte-searcharea{margin-bottom: 15px!important;}
+.fte-bootstrap-wrapper{padding: 0 0 0px!important;}
+#bookingwidgetBEwidget .fte-searcharea {padding: 5px 10px!important;}
+.ftesearchform-btn .fte-checkbtn {/*background-color: #253873;*/ background-color: #d1ad00!important;}
+.ftesearchform-btn .fte-checkbtn:hover {/*background-color: #253873;*/ background-color: #c1a000!important;}
+.hero-additional .arrow{display:none;}
+
+/* CSS for top banner tint */
+.banner-image-tint {position: absolute; top: 0; left: 0; bottom: 0; right: 0; text-align: center; background: #000; opacity: 0.4;}
+.banner-titles {position: absolute; left: 0; bottom: 25%; right: 0; margin: auto; text-align:center;}
+.banner-titles .cm-header-label-con { display: inline-block !important; position: relative; }
+.banner-titles .cm-header-label {color: #fff; font-size: 35px; text-shadow: 1px 5px 10px #000000;}
+.banner-titles p{font-size:17px; color:#d1ad00;}
+.banner-titles p span{font-size:15px;}
+
+/*CSS for Tabs */
+nav > .nav.nav-tabs{
+
+  border: none;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+
+}
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active
+{
+  border: none;
+    padding: 12px 25px;
+    color:#000;
+    background:#fff;
+    border-radius:0;
+}
+nav > div a.nav-item{position:relative;}
+nav > div a.nav-item.nav-link.active:after
+ {
+  content: "";
+  position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+  border: 10px solid transparent;
+  border-top-color: #263a77 ;
+}
+.tab-content{
+  background: #fdfdfd;
+    line-height: 25px;
+    border: 1px solid #ddd;
+    border-top:5px solid #e74c3c;
+    border-bottom:0px solid #e74c3c;
+    padding:30px 25px;
+}
+
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus,
+nav > div a.nav-item.nav-link.active
+{
+  border: none;
+    background: #263a77;
+    color:#fff;
+    border-radius:0;
+    transition:background 0.20s linear;
+}
+
+.hotel-highlights {border-top:1px solid #c4c4c4; border-bottom:1px solid #c4c4c4;}
+.hotel-highlights h4{ text-transform: capitalize; font-weight:600; font-size:1.5em;}
+.hotel-nearby h4{ text-transform: capitalize; font-weight:600; font-size:1.5em;}
+.hotel-review h4{ text-transform: capitalize; font-weight:600; font-size:1.5em;}
+.hotel-location h4{ text-transform: capitalize; font-weight:600; font-size:1.5em;}
+.testimonial.testimonial-style-2 .testimonial-author img {margin: 0 auto 15px; max-width: 100px; max-height: 100px;}
+.nearby h3{ text-transform: capitalize; font-size:1.4em; font-weight:600; }
+.nearby .row{border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb; padding:4% 0%;}
+
+
+.hotel-details-information{color:#000;}
+.hotel-details-information h3{ text-transform: capitalize; font-weight:400; }
+.hotel-details-information .add-info{font-size:0.85em;}
+
+
+.hotel-inner-pad{padding:2%;}
+.hotel-inner-pad .sub-heading{font-size:1.3em; font-weight:600;}
+
+/* Hotel Accomodation */
+.hotel-acco-details h4 {text-transform: capitalize; font-weight: 600; font-size: 1.5em;}
+.hotel-acco-details{ position: relative; }
+.hotel-acco-details .hotel-listing-footer{ position: absolute; bottom:10px; width:100%; }
+.hotel-acco-details .hotel-listing-footer .listing-rate{border-top:1px solid #c7c7c7; }
+.hotel-acco-details .hotel-listing-footer .listing-rate span{font-size: 12px; display:block;}
+.hotel-acco-details .hotel-listing-footer .listing-rate span.listing-price{font-size: 22px; font-weight:700; line-height: 120%;}
+.hotel-acco-details .hotel-listing-footer .listing-view-hotel{ border-top:1px solid #c7c7c7; }
+.room-details-container{padding:2%; background-color: #f8f8f8; border-left:5px solid #ca9e19; font-size:13px; display:none;}
+.room-details-container h4{text-transform: capitalize; font-size: 1.2em; line-height: 100%; font-weight: 500; color: #000;}
+
+/* Meetings */
+.table-bordered thead{background:#e5e5e5;}
+
+/* css for hotel listing tag */
+.resort{background-color:#4da7b2!important;}
+.park{background-color:#76ad36!important;}
+
+/* css carousel next prev */
+/*.owl-carousel .owl-nav button.owl-next:before, .owl-carousel .owl-nav button.owl-prev:before{padding: 30% 40%; background-color: rgba(0, 0, 0, 0.75); border-radius: 5px;}*/
+
+/* css gallery */
+.img-thumbnail .zoom i {font-size: 10px; left: 0px;  position: relative; top: 2px;}
+.img-thumbnail img {border-radius: 0px;}
+.mfp-bg{opacity: .9;}
+.img-thumbnail .zoom{background-color: rgba(38, 58, 119, 0.75)}
+
+/* CSS for Hotel Development */
+.partner-info {background: #fff;}
+.partner-info .partner-info-details {padding: 4%;}
+.partner-info .partner-info-details p:first-child {font-size: 16px;  font-weight: 600;}
+.partner-info .partner-info-details p {margin: 0px; padding: 0px; font-size: 13px; line-height: 140%;}
+#header .header-nav-main nav > ul > li > a.single-item:hover{text-decoration: none!important;}
+
+/* CSS for Overview */
+.overview-container h3{font-size: 27px; margin-top:0px; color:#000; font-weight:600;}
+.overview-container h4{font-size: 18px; margin-top:0px; color:#000; font-weight:400;}
+.overview-container p {font-size: 14px; line-height: 160%; color:#333; font-weight:500;}
+.overview-container .breadcrumb {background-color: transparent; padding: 0px; color: #000; font-size: 12px;}
+.overview-container .breadcrumb a{color: #000;}
+.blockquote-primary p{font-size:18px; }
+html .blockquote-primary {border-color: #263a77 !important;}
+.signature-box{-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);}
+.signature-content{background:#fff; padding:7%; text-align: center; min-height: 168px;}
+.signature-content h4{font-size:17px; font-weight:600;}
+
+.upcoming-hotel-box{-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);}
+.upcoming-hotel-content{background:#fff; padding:7%; text-align: center; }
+.upcoming-hotel-content h4{font-size:17px; font-weight:600;}
+.upcoming-hotel-content p{margin-bottom:0px;}
+
+/* Booking Modal */
+.mob-booknow-modal{z-index: 9999!important;}
+.mob-booknow-modal .close{background-color:#fff!important; color: #000 !important; padding: 0px;
+    top: 25px; font-size: 35px; font-weight: normal;}
+.mob-booknow-modal h3.modal-title{text-transform: uppercase;}
+
+/* Leadership */
+.managing-director{border: 3px solid #d1ad00; background-color:#fff;}
+.managing-director .md-bio{padding:2% 2% 2% 0%; }
+.managing-director .md-bio h2{font-weight:500; }
+.managing-director .md-bio h6{font-weight:500; color:#757575;}
+.managing-director .md-bio .add-info{ text-align: right; }
+.managing-director .md-bio .add-info p{font-size:27px; font-weight:900; color:#c6c6c6;}
+.other-members{background:#fff;}
+.other-members .other-members-info{padding:6%;}
+.other-members .other-members-info h4{font-weight:500; margin-bottom:5px;}
+.other-members .other-members-info h6{font-weight:500; color:#757575; font-size:14px; margin-bottom:0px;}
+
+/* Team page */
+.member-bio{padding:0%; position:relative;}
+.member-details .member-bio .member-profile-intro{position:relative; background-color: #253873; color:#fff; padding: 5% 5% 3% 5%; left: -7%; top: 15%; width: 60%;}
+.member-details .member-bio .member-profile-intro h2{color:#fff;}
+.member-details .member-bio .member-profile-intro h6{color:#fff;}
+.member-details .member-bio .member-profile-intro .blockquote-primary{border-left: 3px solid #fff!important;}
+.member-details .member-bio .member-profile-intro .blockquote-primary p{color:#fff; font-size:14px; margin-bottom:10px;}
+.member-profile-details{position:relative; top: 20%;}
+.member-details .member-bio .member-profile-details p{color:#000; }
+.member-details .member-bio .member-profile-addinfo{position:absolute; right:0px;}
+.member-details .member-bio .member-profile-addinfo p{font-size:27px; font-weight:900; color:#b1b1b1; text-align: right;}
+
+/* Offers */
+.generic-offer-content ul{padding-left:25px; margin-left:0px;}
+.participating-hotel-offer h4{font-size: 1.1em;}
+.offer-listing ul{padding-left:25px; margin-left:0px;}
+
+/* Hotels page */
+.search-hotel-form .field-label{font-size:14px; font-weight:600;}
+.search-hotel-form .field-label i{margin-right:8px;}
+.search-hotel-form input{ border-bottom:1px solid #bcbcbc; border-left:0px solid #000; border-right:0px solid #000; border-top:0px solid #000; border-radius:0px;}
+.search-hotel-form select{ border-bottom:1px solid #bcbcbc; border-left:0px solid #000; border-right:0px solid #000; border-top:0px solid #000; border-radius:0px;}
+.hotel-list-location .accordion_head{
+  background-color: #fff; color: #000; cursor: pointer; font-size: 16px; margin: 0 0 5px 0; padding: 16px 14px 10px 14px;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+}
+.hotel-list-location .accordion_head{position: relative}
+.hotel-list-location .accordion_head span.plusminus{color: #000; font-size: 27px; top: 28px; float: none; position: absolute; right: 20px;}
+.hotel-list-location .accordion_head h3{margin-bottom:0px; font-size: 20px;}
+.hotel-list-location .accordion_head h3 a{color:#000;}
+.hotel-list-location .accordion_body{background: #eaeaea; padding: 15px; margin-bottom: 0px;}
+.hotel-list-location{height:450px; overflow-y: auto;}
+.hotel-list-items h6{font-weight: 600; margin-bottom: 5px;}
+.hotel-list-items h6 a{color:#000;}
+.hotel-list-items p{font-size:12px;}
+
+
+/* Our Presence */
+.our-presence a.our-presence-link{border:1px solid #253a76; padding:6px 12px; border-radius:5px; font-weight:600;}
+.panel-body{margin-top:2%;}
+
+/* css dynamic */
+.pink{background-color:#d0177c;}
+.black{background-color:#000000;}
+.orange{background-color:#d63f00;}
+.green{background-color:#84af27;}
+
+/* CSS for social icons */
+.facebook{color:#3a559f;}
+.twitter{color:#00abf1;}
+.linkedin{color:#0077b7;}
+.icons{color:#d1ad00;}
+
+
+/*CSS deactive for Desktop */
+.mob-book-now{display:none;}
+.be-container p{display:none;}
+.hotellist-head-mob{display:none;}
+.more-container-mobile{display:none;}
+.mobile-nav-morelinks{display:none;}
+
+/*CSS for Footer */
+.footer-mainlinks ul.footer-links-items{list-style: none; margin:0px; padding:0px;}
+.footer-mainlinks ul.footer-links-items li a{font-size:12px;}
+.footer-mainlinks p.footer-links-title{text-transform: uppercase; margin-bottom:5px;}
+
+/*CSS for Business Development */
+.bd-tabs .nav-tabs{justify-content: left!important;}
+.bd-tabs .nav-tabs li.active .nav-link{color:#253a76!important; border-bottom-color: #253a76!important; font-weight:600;}
+.bd-tabs .nav-tabs li .nav-link:hover{border-top-color: #253a76!important; color: #253a76!important; border-bottom-color: #253a76!important;}
+.bd-container h4{font-size:18px; font-weight:600;}
+.parallax:not(.page-header):not(.match-height):not([class*="section-height-"]){margin: 0px 0;  padding: 30px 0;}
+.meet-bd-partner{background-image: url("../img/bg-corporate-1-1.jpg"); background-size: cover;}
+.location-team .signature-content{min-height:auto;}
+.bd-signature-content{background: #fff; padding: 7%; text-align: left; height:150px;}
+.bd-signature-content p{font-size:12px;}
+
+/* CSS for buttons */
+html .btn-outline.btn-primary {color: #253a76; background-color: transparent; background-image: none; border-color: #253a76;}
+html .btn-outline.btn-primary:hover{color: #FFF; background-color: #253a76; border-color: #253a76;}
+
+/* CSS for Parallex */
+.call-to-action .call-to-action-content{text-align: left;}
+
+.bd-testimonial{background-color:#fff;}
+.content-grid .content-grid-item:last-child{border-right:1px solid #DADADA;}
+
+
+
+
+@media (min-width: 992px){
+#header .header-nav-main nav > ul > li.dropdown-mega .dropdown-mega-content {padding: 0rem; background-color: #f1f1f1;}
+#header .header-nav-main.header-nav-main-square nav > ul > li.dropdown-mega > .dropdown-menu{margin: 0px; padding: 0px; }
+#header .header-nav-main nav > ul > li.dropdown .dropdown-menu{border-top: 1px solid #CCC;}
+#header .header-nav-main nav > ul > li > a{font-size: 12px; font-weight:600; color:#000!important;}
+#header .header-nav-main nav > ul > li.dropdown .dropdown-menu {border-top-color: #cda829; }
+#header .header-nav-main nav > ul > li.dropdown .dropdown-menu li a{padding: 0px; font-size: 0.85em; color: #494949; font-weight:500;}
+}
+
+
+@media (min-width: 1200px){
+.container {
+    max-width: 1250px;
+}
+}
+
+
+@media (max-width: 460px) and (min-width: 320px){
+h3{font-size: 1.2em; padding-left: 0px; padding-right:15px; font-weight: 600;}
+.container{padding-left: 0px; padding-right:0px;}
+#header .header-btn-collapse-nav {background: transparent; color:#000; font-size: 2rem; font-weight:400;}
+.be-container{display:none; background: #263a77; position: fixed; width: 100%; left: 0px; top: 100px;;  height: 90vh; background: #263a77;}
+.be-container p{display:block; color: #fff; font-size: 24px;  font-weight: 600; padding: 3% 7%; margin-top: 0%; margin-bottom: 0px; background-color: #16244e;}
+.be-container p > span{float: right; font-size: 30px;}
+#bookingwidgetBEwidget{margin-top: 0px;}
+.mob-book-now{display:block; position:fixed; bottom:0px; width:100%; background-color:#cda829; text-align: center;  z-index:9;}
+.mob-book-now a{color:#fff; font-size:20px; font-weight:600; display:block; padding:2% 0%; text-decoration: none;}
+#bookingwidgetBEwidget .ftesearchform-btn .fte-checkbtn{width: 100%!important;}
+.fte-searcharea{background: #263a77!important;}
+#displayValue{color:#fff!important; font-size: 18px!important; border-bottom: 1px solid #7e7e7e;}
+#bookingwidgetBEwidget .fte-bootstrap-wrapper .fte-searcharea .fte-form-group .fte-form-control#checkInCheckOutGroup::placeholder{color:#fff!important; font-size: 18px!important;}
+#bookingwidgetBEwidget .fte-bootstrap-wrapper .fte-searcharea .fte-form-group i{color: #fff!important; font-size: 18px!important;}
+#bookingwidgetBEwidget .ftesearchform .fte-form-group label.w-label{font-size: 18px!important; color: #fff!important; font-weight: 500!important;}
+i.fa fa-calendar-o{color: #fff !important;}
+#bookingwidgetBEwidget .ftesearchform .fte-form-group.frm-sec2{border-bottom: 1px solid #7e7e7e!important;}
+#bookingwidgetBEwidget .ftesearchform .fte-form-group.frm-sec3{border-bottom: 1px solid #7e7e7e!important;}
+#bookingwidgetBEwidget .ftesearchform .fte-form-group label.w-label + input#FTEpromoCodeGroup{height: 50px; border-bottom: 1px solid #7e7e7e!important;}
+.owl-carousel.show-nav-title .owl-nav{right: 15px;}
+.other-sections p{padding-left: 15px; padding-right:15px;}
+.card .btn.btn-sm{float:left!important; margin-top:10px;}
+.opening-soon{text-align:left!important;}
+#media_image-1{padding-left: 15px;}
+.textwidget{padding-left: 15px; padding-right: 15px;}
+.our-presence{padding-left: 15px; padding-right: 15px;}
+.offer-listing p, .offer-listing h4, .offer-listing h6{padding-left: 0px; padding-right: 15px;}
+.offer-listing h3{margin-bottom: 15px!important; padding-left: 15px; padding-right: 15px; margin-top: 15px!important;}
+.offer-listing h6{padding-left: 15px; padding-right: 15px;}
+.offer-listing p{padding-left: 15px; padding-right: 15px;}
+.breadcrumb-black{padding-left: 15px; padding-right: 15px; display:none;}
+.panel-body li{width:50%; float:left;}
+.no-mobile{display:none!important;}
+p.top-img{padding-left: 0px; padding-right: 0px;}
+.offer-listing .card .btn.btn-sm{float:none!important; margin-top:0px; text-align: center; }
+.offer-listing .card-body{height: auto;}
+
+/* Homepage */
+.popular-destinations h3, .cygnett-happenings h3, .other-sections h3, .cygnett-offers h3, .cygnett-news h3{padding-left: 15px; padding-right: 15px; font-weight:700; margin: 15px 0px!important;}
+.popular-destinations{padding-bottom: 0px!important; padding-top: 20px!important;}
+.cygnett-offers{padding-bottom: 0px!important;}
+.cygnett-happenings{padding-bottom: 0px!important;}
+.cygnett-news{padding-bottom: 0px!important;}
+.other-sections p.card-text {padding-left: 0px; padding-right: 15px; font-size: 15px;}
+
+
+/* Offer Details page */
+.offer-details{margin-top: 0px; padding:15px!important;}
+.participating-hotel-offer > div{padding:0px!important; margin-bottom:0px!important;}
+.participating-hotel-offer .mb-4{margin-bottom: 0rem!important;}
+.participating-hotel-offer .card-shadow{margin-bottom: 0px;}
+.participating-hotel-offer h3{padding: 10px 15px 25px 15px;}
+
+
+/* Dining Details */
+.brand-media div{padding-left: 0px; padding-right: 0px;}
+.brand-media h3{font-size: 1.4em; padding-left: 15px; margin-top:0px!important;}
+.brand-media .card-body{padding-left: 15px; padding-right: 15px;}
+.video-pad {padding-bottom: 0%;  padding-left: 0%; padding-right: 0%;}
+.brands-container h3{padding-left: 0px; padding-right: 0px; margin-top: 0px!important;}
+.mob-dining-img{width:120px!important; height:120px!important; margin-bottom:15px;}
+.breadcrumb{display:none;}
+
+/* Megamenu */
+.our-story-megamenu .tab{width:100%;}
+.our-story-megamenu .tabcontent{display:none!important;}
+.cygnett-brands-megamenu .tab{width:100%; padding: 14px 20px 0px 20px!important; text-align: center; text-transform: uppercase; background-color: #dedede;}
+.cygnett-brands-megamenu .tab h4{color: #333;}
+.cygnett-brands-megamenu .tab p{display:none!important;}
+.cygnett-brands-megamenu .other-tabcontent{width: 100%; background-color: #f1f1f1; padding-top:0px; height: auto;}
+.cygnett-brands-megamenu .other-tabcontent .content-grid{margin-top:0px!important;}
+.cygnett-brands-megamenu .other-tabcontent .content-grid-item{width:50%; padding: 0px;}
+.cygnett-brands-megamenu .other-tabcontent .content-grid-item div{padding:10px!important;}
+#header .header-nav-main nav{position: absolute; width: 100%; max-height: 100vh; z-index: 999999; height:100vh; transition: ease all 200ms;}
+#header .header-nav-main:not(.header-nav-main-mobile-dark) nav > ul > li > a{color:#000;}
+#header .header-nav-main nav > ul li a{font-size: 20px;}
+#header .header-nav-main nav > ul > li > a{font-weight: 500; padding: 20px 0px;}
+#header .header-nav-main nav > ul li.dropdown.open > .dropdown-menu{margin-left: 0px;}
+.cygnett-brands-megamenu .location-name{padding-left: 16px; width:50%; font-weight: 400; padding: 7px 10px!important;}
+#header .header-nav-main .location-name a{font-size: 20px; padding:0px; font-size: 17px;  padding: 0px; font-weight: 500;}
+.other-tabcontent h3{display:none!important;}
+.location-container{padding-top:20px;}
+#header .header-nav-main nav > ul > li > a.single-item{display:block;}
+.dropdown-menu{height:400px; overflow:auto;}
+
+
+/* Our Presence */
+.our-presence {border-top: 0px solid #bebebe;}
+
+/* Brand */
+.brands-container h3 {line-height: 150%;}
+.brands-container p{font-size: 17px;}
+.brands-container p.figure-large{font-size: 60px; text-align: center; display: block;}
+.brands-container p.figure-small{font-size: 20px; text-align: center; display: block;}
+
+/* Location Details */
+.banner-titles .cm-header-label{font-size: 25px;}
+.hotel-list-slider{display:none;}
+.hotellist-head-mob{display: block; text-align: center; margin: 20px 0px; padding: 0px; font-size: 1.7em;}
+
+/* Hotel Details */
+.city-details{padding-left: 15px; padding-right: 15px;}
+.hotel-listing{padding-bottom: 20px;}
+.hotel-listing p{margin-top:20px;}
+.hotel-listing-img{padding-right:0px!important;}
+.hotel-listing .hotel-listing-footer{ position: unset; }
+.hotel-listing .hotel-listing-footer .listing-view-hotel{border-top: 0px solid #c7c7c7; padding-top: 0px!important;}
+.hotel-listing p.text-muted{margin-top: 0px;}
+.hotel-inner-pad{padding:15px;}
+.hotel-highlights div.highlight-list{width:50%; float:left; font-size: 12px;}
+/*.owl-carousel.stage-margin.stage-margin-lg .owl-stage-outer {margin-left: 40px !important; margin-right: 40px !important;}
+.owl-carousel.owl-drag .owl-item.active{width:350px!important; margin-right: 40px!important; padding-left:60px;}
+.owl-carousel.owl-drag .owl-item.cloned{margin-right: 60px!important;}
+.hotel-review .owl-carousel {margin-bottom:40px!important;}*/
+.hotel-inner-pad .sub-heading{text-align:center; font-size: 1em; font-weight:600; text-transform: uppercase; background:#263a77; color:#fff; padding:10px 0px;}
+.hotel-highlights h4, .hotel-review h4, .hotel-location h4{text-align:center; font-size: 1em; font-weight:600; text-transform: uppercase; background:#263a77; color:#fff; padding:15px 0px;}
+.hotel-details-information{margin-bottom:30px;}
+.hotel-details-information h3{font-weight:600; text-transform: uppercase; font-size: 1.6em; line-height: 140%;}
+.hotel-details-information p{margin-top:10px!important;}
+.hotel-details-information .TA_cdsratingsonlynarrow{display:none!important;}
+.hotel-inner-pad span{display:block; margin-top:10px;}{}
+.nearby{text-align:center;}
+
+/* Hotel Accomodation */
+.hotel-acco-details .hotel-listing-footer{position:unset; padding-bottom: 15px;}
+.hotel-acco-details .hotel-listing-footer .listing-rate{border-top: 0px solid #c7c7c7; padding-top: 0px!important;}
+.hotel-acco-details .hotel-listing-footer .listing-view-hotel{border-top: 0px solid #c7c7c7; padding-top: 0px!important;}
+.hotel-acco-details .room-info{width: 50%; float: left; font-size: 15px; margin-top: 6px;}
+.hotel-acco-details .room-amenities{width: 50%; float: left; font-size: 15px; margin-top: 6px;}
+.hotel-acco-details .room-info-head{text-align: center; font-size: 1em; font-weight: 600; text-transform: uppercase; background: #263a77; color: #fff; padding: 10px 0px;}
+.hotel-acco-details .room-amenities-head{text-align: center; font-size: 1em; font-weight: 600; text-transform: uppercase; background: #263a77; color: #fff; padding: 10px 0px; margin-bottom: 5px!important;}
+
+/* Hotel Offers Page */
+.offer-listing{margin-bottom:0px!important; margin-top: 0px!important;}
+
+
+/* Hotel Sub Menu */
+.body {background-color: #fff;}
+nav > div a.nav-item.nav-link, nav > div a.nav-item.nav-link.active{padding:12px 0px; text-align: center; font-size: 12px; border-bottom: 1px solid #DADADA !important;}
+.nav-item{display:none;}
+.nav-item:nth-child(1){display:block;}
+.nav-item:nth-child(2){display:block; }
+.more-container-mobile{width:30%; display:block;  background:#e5e5e5;}
+.more-container-mobile span{display:block; padding:18px 0px; text-align: center;}
+nav.nav-mob-pad{position:relative; margin-bottom:20px!important;}
+.mobile-nav-morelinks{display:none; position:fixed; top:0px; left: 0px; height:100vh; background-color:#fff; width:100%; z-index: 9999; padding: 18% 10%;}
+.mobile-nav-morelinks h3{ text-align: center; font-size: 27px; line-height: 140%; margin-bottom: 0px; color: #253873;}
+.mobile-nav-morelinks p{ text-align: center; font-size: 20px; margin-top: 5px; color:#7b7b7b;}
+.mobile-nav-morelinks ul{margin-top: 50px; padding-left: 0px;}
+.mobile-nav-morelinks ul li{width:100%; list-style: none; text-align: center;}
+.mobile-nav-morelinks ul li a{font-size: 20px; color: #000; padding: 7% 0%; display: block;  border-bottom: 1px solid #c3c3c3;}
+.mobile-nav-morelinks .close{top: 15px; right: 25px;}
+.mobile-nav-morelinks .close a{color:#000;}
+
+/* Footer */
+#contact-details-1{padding-left: 25px; padding-right: 25px;}
+
+/*Overview */
+.overview-container h3{line-height:135%;}
+.separator-img-section{display:none;}
+.separator-img-section img:nth-child(2){display:block;}
+.signature-content{min-height: auto;}
+.signature-content p{margin-bottom:0px;}
+
+/* Leadership */
+.overview-container .accordion{margin-bottom:0px!important; margin-top:0px!important;}
+.accordion__label{font-size: 1em!important; text-align:left!important;}
+.accordion input[type="radio"]:checked + label + .accordion__content{padding: 3%;}
+.managing-director .md-bio{padding: 5% 8%;}
+.leadership-head{ text-align: center; }
+.managing-director .md-bio .add-info{display:none;}
+.member-details .member-bio .member-profile-addinfo{display:none;}
+.member-details .member-bio .member-profile-intro {position: relative; background-color: #253873; color: #fff; padding: 5% 5% 3% 7%;
+    left: 0%; top: 1%; width: 100%;}
+.member-profile-details {position: relative; top: 0%; padding: 5% 8%;}
+
+/* Generic */
+.overview-container p{font-size: 16px; line-height: 180%;}
+
+
+}

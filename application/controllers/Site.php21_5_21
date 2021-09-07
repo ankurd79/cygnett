@@ -1,0 +1,273 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Site extends CI_Controller {
+
+    function __construct() {
+    	parent::__construct();
+    	$this->module='Global';
+    	$this->load->model('api/global/Global_model');
+    	$this->load->model('api/cuisines/Cuisine_model');
+    	$this->load->model('Common_model');
+    	
+    	
+    }
+
+    public function index(){
+
+    	$apiurl=base_url().'api/brands/brand/brandfetch';
+		$brandarr=(getapicurlconnect($apiurl));
+
+		$resapiurl=base_url().'api/restaurants/restaurant/restaurantfetch';
+		$resarr=(getapicurlconnect($resapiurl));
+		
+    	$data=array("title"=>'Home','keywords'=>'','description'=>'','homepagebanners'=>gethomepagebanners(1),'brandlist'=>$brandarr['results'],'restaurantlist'=>$resarr['results']);
+		$this->load->view('site/header',$data);
+		$this->load->view('site/index',$data);
+		$this->load->view('site/footer');
+	}
+	
+	public function locationlanding(){
+
+    	$apiurl=base_url().'api/brands/brand/brandfetch';
+		$brandarr=(getapicurlconnect($apiurl));
+
+		$resapiurl=base_url().'api/restaurants/restaurant/restaurantfetch';
+		$resarr=(getapicurlconnect($resapiurl));
+		
+		$url=base_url().'api/locations/location/locationfetch';
+        $arr=fetchapidata($url);
+		
+    	$data=array("title"=>'Locations','keywords'=>'','description'=>'','brandlist'=>$brandarr['results'],'restaurantlist'=>$resarr['results'],'locationlist'=>$arr['results']);
+		$this->load->view('site/header',$data);
+		$this->load->view('site/location/locations',$data);
+		$this->load->view('site/footer');
+	}
+	
+	public function medialanding(){
+
+    	$apiurl=base_url().'api/brands/brand/brandfetch';
+		$brandarr=(getapicurlconnect($apiurl));
+
+		$resapiurl=base_url().'api/restaurants/restaurant/restaurantfetch';
+		$resarr=(getapicurlconnect($resapiurl));
+		
+		$url=base_url().'api/media/media/mediafetch';
+        $arr=fetchapidata($url);
+		
+    	$data=array("title"=>'Media and News','keywords'=>'','description'=>'','homepagebanners'=>gethomepagebanners(1),'brandlist'=>$brandarr['results'],'restaurantlist'=>$resarr['results'],'medialist'=>$arr['results']);
+		$this->load->view('site/header',$data);
+		$this->load->view('site/media/media-news',$data);
+		$this->load->view('site/footer');
+	}
+
+	public function siteoffers(){
+
+		$apiurl=base_url().'api/brands/brand/brandfetch';
+		$brandarr=(getapicurlconnect($apiurl));
+
+		$resapiurl=base_url().'api/restaurants/restaurant/restaurantfetch';
+		$resarr=(getapicurlconnect($resapiurl));
+
+    	$data=array("title"=>'Cygnett Hotels & Resorts - Hotel Special Offers, Hotels Discounts, Deals','keywords'=>'Cygnett Hotels & Resorts, Hotels in India, Best Hotels in India, Hotel Services in India, Best Hotel Hospitality India, Business Hotels in India, Family Hotels in India, Online Hotel Booking Website, Hotel Booking Website','description'=>'Take Your Pick From A Wide Range Of Discounts And Packages','brandlist'=>$brandarr['results'],'restaurantlist'=>$resarr['results']);
+		$this->load->view('site/header',$data);
+		$this->load->view('site/offers/site_offers',$data);
+		$this->load->view('site/footer');
+	}
+
+	public function siteofferdetails(){
+
+		
+    	$offerId=base64_decode($this->uri->segment(4));
+    	
+        if(!(is_numeric($offerId))){
+        	header("Location:".base_url()."");
+        }
+		$apiurl=base_url().'api/offers/offer/offerfetch';
+		$bannerapi=base_url().'api/offers/offer/offerbannersfetch';
+		$arr=(getapicurlconnect($apiurl,$offerId));
+		$bannerarr=(getapicurlconnect($bannerapi,$offerId));
+
+
+
+		if($offerId<>$arr['results']['0']['id']){
+        	header("Location:".base_url()."");
+        }
+		$canonicalurl=urlgenerator('offers',$arr['results']['0']['offer_name'],$arr['results']['0']['id']);
+
+		if(strcmp($canonicalurl,getAddress())!=0){
+			exit;
+
+		}
+		$metatitle=$arr['results']['0']['meta_title'];
+		$metadescription=$arr['results']['0']['meta_description'];
+		$metakeywords=$arr['results']['0']['meta_keywords'];
+		
+		$aapiurl=base_url().'api/brands/brand/brandfetch';
+		$brandarr=(getapicurlconnect($aapiurl));
+
+		$resapiurl=base_url().'api/restaurants/restaurant/restaurantfetch';
+		$resarr=(getapicurlconnect($resapiurl));
+
+
+    	$data=array("title"=>$metatitle,'keywords'=>$metakeywords,'description'=>$metadescription,'offerdetails'=>$arr,'bannerdetails'=>$bannerarr,'canonicalurl'=>$canonicalurl,'brandlist'=>$brandarr['results'],'restaurantlist'=>$resarr['results']);
+		$this->load->view('site/header',$data);
+		$this->load->view('site/offers/offer_details',$data);
+		$this->load->view('site/footer');
+	}
+
+	public function sitebranddetails(){
+
+		
+    	$brandId=base64_decode($this->uri->segment(4));
+    	
+        if(!(is_numeric($brandId))){
+        	header("Location:".base_url()."");
+        }
+		$apiurl=base_url().'api/brands/brand/brandfetch';
+		$bannerapi=base_url().'api/brands/brand/brandsbannerfetch';
+		$arr=(getapicurlconnect($apiurl,$brandId));
+		$bannerarr=(getapicurlconnect($bannerapi,$brandId));
+
+
+
+		if($brandId<>$arr['results']['0']['id']){
+        	header("Location:".base_url()."");
+        }
+		$canonicalurl=urlgenerator('brands',$arr['results']['0']['brand_name'],$arr['results']['0']['id']);
+
+		if(strcmp($canonicalurl,getAddress())!=0){
+			exit;
+
+		}
+		$metatitle=$arr['results']['0']['meta_title'];
+		$metadescription=$arr['results']['0']['meta_description'];
+		$metakeywords=$arr['results']['0']['meta_keywords'];
+
+		$aapiurl=base_url().'api/brands/brand/brandfetch';
+		$brandarr=(getapicurlconnect($aapiurl));
+
+		$pointerapi=base_url().'api/brands/brand/brandspointersfetch';
+		$pointersarr=(getapicurlconnect($pointerapi,$brandId));
+
+		$resapiurl=base_url().'api/restaurants/restaurant/restaurantfetch';
+		$resarr=(getapicurlconnect($resapiurl));
+
+		
+
+
+
+    	$data=array("title"=>$metatitle,'keywords'=>$metakeywords,'description'=>$metadescription,'details'=>$arr,'bannerdetails'=>$bannerarr,'canonicalurl'=>$canonicalurl,'brandlist'=>$brandarr['results'],'pointers'=>$pointersarr,'restaurantlist'=>$resarr['results']);
+		$this->load->view('site/header',$data);
+		$this->load->view('site/brands/brand_details',$data);
+		$this->load->view('site/footer');
+	}
+
+
+	public function sitediningdetails(){
+
+		
+    	$diningId=base64_decode($this->uri->segment(4));
+    	
+        if(!(is_numeric($diningId))){
+        	header("Location:".base_url()."");
+        }
+		$apiurl=base_url().'api/restaurants/restaurant/restaurantfetch';
+		$bannerapi=base_url().'api/restaurants/restaurant/restaurantbannersfetch';
+		$arr=(getapicurlconnect($apiurl,$diningId));
+		$bannerarr=(getapicurlconnect($bannerapi,$diningId));
+
+
+
+		if($diningId<>$arr['results']['0']['id']){
+        	header("Location:".base_url()."");
+        }
+		$canonicalurl=urlgenerator('dining',$arr['results']['0']['name'],$arr['results']['0']['id']);
+
+		if(strcmp($canonicalurl,getAddress())!=0){
+			exit;
+
+		}
+		$metatitle=$arr['results']['0']['meta_title'];
+		$metadescription=$arr['results']['0']['meta_description'];
+		$metakeywords=$arr['results']['0']['meta_keywords'];
+
+		$aapiurl=base_url().'api/brands/brand/brandfetch';
+		$brandarr=(getapicurlconnect($aapiurl));
+
+		
+
+		$resapiurl=base_url().'api/restaurants/restaurant/restaurantfetch';
+		$resarr=(getapicurlconnect($resapiurl));
+
+		$select=explode(",",$arr['results'][0]['cuisine']);
+		$string='';	
+		foreach($select as $s){
+			$carr=$this->Cuisine_model->getdata($s,'');	
+			$cuisinename=$carr[0]['cuisine_name'];
+
+			$string .= ", $cuisinename";
+		}	
+
+		$string = substr($string, 1);
+
+
+
+    	$data=array("title"=>$metatitle,'keywords'=>$metakeywords,'description'=>$metadescription,'details'=>$arr,'bannerdetails'=>$bannerarr,'canonicalurl'=>$canonicalurl,'brandlist'=>$brandarr['results'],'restaurantlist'=>$resarr['results'],'availablecuisines'=>$string);
+		$this->load->view('site/header',$data);
+		$this->load->view('site/dining/dining_details',$data);
+		$this->load->view('site/footer');
+	}
+
+	public function sitelocationdetails(){
+
+		
+    	$locId=base64_decode($this->uri->segment(5));
+    	//exit;
+    	
+        if(!(is_numeric($locId))){
+        	header("Location:".base_url()."");
+        }
+		$apiurl=base_url().'api/locations/location/restaurantfetchdetail';
+		$bannerapi=base_url().'api/locations/location/locationbannersfetch';
+		$placesapi=base_url().'api/locations/location/locationplacesfetch';
+		$arr=(getapicurlconnect($apiurl,$locId));
+		$bannerarr=(getapicurlconnect($bannerapi,$locId));
+		$placesarr=(getapicurlconnect($placesapi,$locId));
+		//print_r($placesarr);
+
+		$ctryArr=getcountrydetail($arr['results']['0']['country']);
+		
+
+		if($locId<>$arr['results']['0']['id']){
+        	header("Location:".base_url()."");
+        }
+		$canonicalurl=urlgenerator('location',$ctryArr[0]['name'].'/'.$arr['results']['0']['location'],$arr['results']['0']['id']);
+		
+		if(strcmp($canonicalurl,getAddress())!=0){
+			exit;
+
+		}
+		
+		$metatitle=$arr['results']['0']['meta_title'];
+		$metadescription=$arr['results']['0']['meta_description'];
+		$metakeywords=$arr['results']['0']['meta_keywords'];
+
+		/****/
+		$aapiurl=base_url().'api/brands/brand/brandfetch';
+		$brandarr=(getapicurlconnect($aapiurl));
+		$resapiurl=base_url().'api/restaurants/restaurant/restaurantfetch';
+		$resarr=(getapicurlconnect($resapiurl));
+		/****/
+		
+
+
+
+    	$data=array("title"=>$metatitle,'keywords'=>$metakeywords,'description'=>$metadescription,'details'=>$arr,'bannerdetails'=>$bannerarr,'canonicalurl'=>$canonicalurl,'brandlist'=>$brandarr['results'],'restaurantlist'=>$resarr['results'],'places'=>$placesarr['results']);
+		$this->load->view('site/header',$data);
+		$this->load->view('site/location/location-details',$data);
+		$this->load->view('site/footer');
+	}
+	
+	
+	
+}

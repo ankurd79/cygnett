@@ -1,0 +1,159 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Unit extends CI_Controller {
+
+    function __construct() {
+    	parent::__construct();
+    	$this->module='Global';
+    	$this->load->model('api/global/Global_model');
+    	$this->load->model('api/units/Unit_model');
+    	$this->load->model('api/navigations/Hotelnav_model');
+    	$this->load->model('Common_model');
+    	
+    	
+    }
+
+    public function pages(){
+
+    	$apiurl=base_url().'api/brands/brand/brandfetch';
+		$brandarr=(getapicurlconnect($apiurl));
+
+		$resapiurl=base_url().'api/restaurants/restaurant/restaurantfetch';
+		$resarr=(getapicurlconnect($resapiurl));
+
+		$navid=base64_decode($this->uri->segment(6));
+		$unitId=base64_decode($this->uri->segment(7));
+
+		$metaArr=$this->Unit_model->getmetadataofUnit($unitId);
+
+		//print_r($metaArr);
+		if($metaArr){
+			foreach($metaArr as $meta){
+				if($navid==$meta['page_category_id']){
+					$metadescription=$meta['meta_description'];
+					$metatitle=$meta['meta_title'];
+					$metakeywords=$meta['meta_keywords'];
+				}
+			}
+		}else{
+			$metadescription='Description...';
+			$metatitle='Title';
+			$metakeywords='keywords';
+		}
+		//exit;
+			
+		$unitoverviewapi=base_url().'api/units/unit/unitinfofetch';
+		$overviewarr=(getapicurlconnect($unitoverviewapi,$unitId));
+
+		if($navid==1){
+
+			$unitotherpolicyapi=base_url().'api/units/unit/unitotherpolicyfetch';
+			$othpolicyarr=(getapicurlconnect($unitotherpolicyapi,$unitId));
+
+			$unitsocialmediaapi=base_url().'api/units/unit/unitsocialmediafetch';
+			$socialarr=(getapicurlconnect($unitsocialmediaapi,$unitId));
+
+			$unitphoneapi=base_url().'api/units/unit/unitphonefetch';
+			$phonearr=(getapicurlconnect($unitphoneapi,$unitId));
+
+			$unitemailapi=base_url().'api/units/unit/unitemailfetch';
+			$mailarr=(getapicurlconnect($unitemailapi,$unitId));
+
+			$unitnearbyapi=base_url().'api/units/unit/unitnearbyfetch';
+			$nearbyarr=(getapicurlconnect($unitnearbyapi,$unitId));
+
+			$unitfacilityapi=base_url().'api/units/unit/unitfacilityfetch';
+			$facilityarr=(getapicurlconnect($unitfacilityapi,$unitId));
+
+			$parray=array('otherpolicies'=>$othpolicyarr['results'],'social'=>$socialarr['results'],'phonelist'=>$phonearr['results'],'maillist'=>$mailarr['results'],'nearbylist'=>$nearbyarr['results'],'facilitylist'=>$facilityarr['results']);
+			
+		}elseif($navid==3){
+
+			$unitroomlistapi=base_url().'api/units/unit/unitroomlistfetch';
+			$roomlistarr=(getapicurlconnect($unitroomlistapi,$unitId));
+			$parray=array('roomlist'=>$roomlistarr['results']);
+
+			//print_r($parray);
+		}elseif($navid==6){
+
+			$apiurl=base_url().'api/units/unit/unitgalleryfetch';
+			$gallarr=(getapicurlconnect($apiurl,$unitId));
+			$parray=array('gallerylist'=>$gallarr['results']);
+		}elseif($navid==4){
+			$apiurl=base_url().'api/units/unit/unitbanquetmeetingfetch';
+			$arr=(getapicurlconnect($apiurl,$unitId));
+			$parray=array('banquestlist'=>$arr['results']);
+		}elseif($navid==5){
+			$apiurl=base_url().'api/units/unit/unitrestaurantfetch';
+			$arr=(getapicurlconnect($apiurl,$unitId));
+			$parray=array('restaurantlist'=>$arr['results']);
+		}elseif($navid==7){
+			$apiurl=base_url().'api/units/unit/unitofferfetch';
+			$arr=(getapicurlconnect($apiurl,$unitId));
+			$parray=array('offerlist'=>$arr['results']);
+		}
+		
+    	$common=array("title"=>$metatitle,'keywords'=>$metakeywords,'description'=>$metadescription,'brandlist'=>$brandarr['results'],'restaurantlist'=>$resarr['results'],'navid'=>$navid,'hotelnavigation'=>$this->Hotelnav_model->getdata('',0),'unitinfo'=>$overviewarr['results']['0']);
+
+    	$data=array_merge($common,$parray);
+		$this->load->view('site/header',$data);
+		$this->load->view('site/unit/unitpage',$data);
+		$this->load->view('site/footer');
+	}
+	
+	public function hotelofferdetails(){
+
+		$offerId=base64_decode($this->uri->segment(7));
+    	
+        if(!(is_numeric($offerId))){
+        	header("Location:".base_url()."");
+        }
+        $apiurl=base_url().'api/units/unit/unitofferfetchsingle';
+        $arr=(getapicurlconnect($apiurl,$offerId));
+
+        $apiurlimgs=base_url().'api/units/unit/unitofferimgfetch';
+        $imgsarr=(getapicurlconnect($apiurlimgs,$offerId));
+
+
+        //print_r($arr);
+		
+
+        
+        if($offerId<>$arr['results']['0']['id']){
+        	header("Location:".base_url()."");
+        }
+		
+		$canonicalurl=urlgenerator('offers',$arr['results']['0']['offer_name'],$arr['results']['0']['id']);
+		/*
+		if(strcmp($canonicalurl,getAddress())!=0){
+			exit;
+
+		}
+		*/
+		
+		$unitoverviewapi=base_url().'api/units/unit/unitinfofetch';
+		$overviewarr=(getapicurlconnect($unitoverviewapi,$arr['results']['0']['hotel_id']));
+
+
+
+		$metatitle=$arr['results']['0']['meta_title'];
+		$metadescription=$arr['results']['0']['meta_description'];
+		$metakeywords=$arr['results']['0']['meta_keywords'];
+
+		$aapiurl=base_url().'api/brands/brand/brandfetch';
+		$brandarr=(getapicurlconnect($aapiurl));
+
+		$resapiurl=base_url().'api/restaurants/restaurant/restaurantfetch';
+		$resarr=(getapicurlconnect($resapiurl));
+
+		$data=array("title"=>$metatitle,'keywords'=>$metakeywords,'description'=>$metadescription,'offerdetails'=>$arr['results'],'bannerdetails'=>'','canonicalurl'=>$canonicalurl,'brandlist'=>$brandarr['results'],'restaurantlist'=>$resarr['results'],'hotel'=>$overviewarr['results'][0],'bannerlist'=>$imgsarr['results']);
+
+		$this->load->view('site/header',$data);
+		$this->load->view('site/unit/hotel-offer-details',$data);
+		$this->load->view('site/footer');
+
+	}
+	
+	
+	
+}
