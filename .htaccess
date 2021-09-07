@@ -1,0 +1,559 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+
+Options +SymLinksIfOwnerMatch 
+#ErrorDocument 404 https://www.cygnetthotels.com/
+ErrorDocument 404 https://www.cygnetthotels.com/404.html
+
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.cygnetthotels.com/$1 [R,L]
+
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
+
+RewriteRule "^mountain-breeze-nainital" "/landingpage/mountain-breeze-landing-page1.html" [NC]
+#RewriteRule "^cygnett.delhihotels.com" "/myfolder/index.html" [NC]
+
+
+Redirect 301 /about /overview.php
+Redirect 301 /careers /careers-at-cygnett
+Redirect 301 /contact-us /contact-us.php
+Redirect 301 /upcominghotels /our-hotels
+Redirect 301 /ourhotels /our-hotels
+Redirect 301 /ourteam /team.php
+
+Redirect 301 /special-offer /offers.php
+Redirect 301 /media /media-news.php
+Redirect 301 /development-support /business-development
+Redirect 301 /ourbrands-cygnett-plaza /brands.php
+Redirect 301 /ourbrands-cygnett-park /brands.php
+Redirect 301 /ourbrands-cygnett-residences /brands.php
+Redirect 301 /ourbrands-cygnett-inn /brands.php
+Redirect 301 /ourbrands-cygnett-lite /brands.php
+Redirect 301 /contact-us /contact-us.php
+Redirect 301 /why-book-direct /offers.php
+
+
+Redirect 301 /cygnetture-cuisine /
+Redirect 301 /terms-and-conditions /terms-conditions.php
+#Redirect 301 /our-brands /brands.php
+Redirect 301 /cygnettsignature /signature.php
+Redirect 301 /visionmission /vision-mission.php
+Redirect 301 /cygnettcorevalues /core-values.php
+Redirect 301 /safetyandsecurity /safety.php
+
+Redirect 301 /cuisine.php /
+Redirect 301 /partner-with-us.php/hotels-in-digha.php /hotels-in-digha
+Redirect 301 /partner-with-us.php /business-development
+Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal.php/safety.php /safety.php
+
+Redirect 301 /guest-review.php/cygnett-lite-alwar-rajasthan.php /guest-review.php
+
+
+Redirect 301 /brands-cygnett-lite.php /brands.php
+
+Redirect 301 /bongaigaon-hotels/cygnett-park-meghna-bongaigaon/stay /cygnett-park-meghna-bongaigaon/unit-accomodation
+Redirect 301 /bongaigaon-hotels/cygnett-park-meghna-bongaigaon/offer /cygnett-park-meghna-bongaigaon/unit-offers
+Redirect 301 /bongaigaon-hotels/cygnett-park-meghna-bongaigaon/dining /cygnett-park-meghna-bongaigaon/unit-dining
+Redirect 301 /bongaigaon-hotels/cygnett-park-meghna-bongaigaon/meeting-and-events /cygnett-park-meghna-bongaigaon/unit-meetings-and-events
+Redirect 301 /bongaigaon-hotels/cygnett-park-meghna-bongaigaon/gallery /cygnett-park-meghna-bongaigaon/unit-gallery
+Redirect 301 /bongaigaon-hotels/cygnett-park-meghna-bongaigaon/contact-us /cygnett-park-meghna-bongaigaon/unit-overview
+
+Redirect 301 /digha-hotels/cygnett-lite-digha/stay /
+Redirect 301 /digha-hotels/cygnett-lite-digha/dining /
+Redirect 301 /digha-hotels/cygnett-lite-digha/meeting-and-events /
+Redirect 301 /digha-hotels/cygnett-lite-digha/gallery /
+Redirect 301 /digha-hotels/cygnett-lite-digha/offer /
+Redirect 301 /digha-hotels/cygnett-lite-digha/contact-us /
+
+Redirect 301 /dwarka-hotels/cygnett-inn-dwarka/stay /
+Redirect 301 /dwarka-hotels/cygnett-inn-dwarka/dining /
+Redirect 301 /dwarka-hotels/cygnett-inn-dwarka/meeting-and-events /
+Redirect 301 /dwarka-hotels/cygnett-inn-dwarka/offer /
+Redirect 301 /dwarka-hotels/cygnett-inn-dwarka/gallery /
+Redirect 301 /dwarka-hotels/cygnett-inn-dwarka/contact-us /
+
+
+Redirect 301 /goa-hotels/cygnett-lite-celestiial-goa/stay /cygnett-inn-celestiial-goa/unit-overview
+Redirect 301 /goa-hotels/cygnett-lite-celestiial-goa/dining /cygnett-inn-celestiial-goa/unit-dining
+Redirect 301 /goa-hotels/cygnett-lite-celestiial-goa/meeting-and-events /cygnett-inn-celestiial-goa/unit-meetings-and-events
+Redirect 301 /goa-hotels/cygnett-lite-celestiial-goa/gallery /cygnett-inn-celestiial-goa/unit-gallery
+Redirect 301 /goa-hotels/cygnett-lite-celestiial-goa/contact-us /cygnett-inn-celestiial-goa/unit-overview
+
+
+Redirect 301 /guwahati-hotels/cygnett-inn-repose-guwahati/stay /
+Redirect 301 /guwahati-hotels/cygnett-inn-repose-guwahati/offer /
+Redirect 301 /guwahati-hotels/cygnett-inn-repose-guwahati/dining /
+Redirect 301 /guwahati-hotels/cygnett-inn-repose-guwahati/meeting-and-events /
+Redirect 301 /guwahati-hotels/cygnett-inn-repose-guwahati/gallery /
+Redirect 301 /guwahati-hotels/cygnett-inn-repose-guwahati/contact-us /
+
+
+Redirect 301 /kolkata-hotels/jameson-inn-shiraz-kolkata/offer /siamton-inn-elect-kolkata/unit-offers
+Redirect 301 /kolkata-hotels/jameson-inn-shiraz-kolkata/dining /siamton-inn-elect-kolkata/unit-dining
+Redirect 301 /kolkata-hotels/jameson-inn-shiraz-kolkata/meeting-and-events /siamton-inn-elect-kolkata/unit-meetings-and-events
+Redirect 301 /kolkata-hotels/jameson-inn-shiraz-kolkata/gallery /siamton-inn-elect-kolkata/unit-gallery
+Redirect 301 /kolkata-hotels/jameson-inn-shiraz-kolkata/contact-us /siamton-inn-elect-kolkata/unit-overview
+
+
+
+
+Redirect 301 /lucknow-hotels/cygnett-park-lucknow/stay /cygnett-park-di-arch-lucknow/unit-overview
+Redirect 301 /lucknow-hotels/cygnett-park-lucknow/offer /cygnett-park-di-arch-lucknow/unit-offers
+Redirect 301 /lucknow-hotels/cygnett-park-lucknow/dining /cygnett-park-di-arch-lucknow/unit-dining
+Redirect 301 /lucknow-hotels/cygnett-park-lucknow/meeting-and-events /cygnett-park-di-arch-lucknow/unit-meetings-and-events
+Redirect 301 /lucknow-hotels/cygnett-park-lucknow/gallery /cygnett-park-di-arch-lucknow/unit-gallery
+Redirect 301 /lucknow-hotels/cygnett-park-lucknow/contact-us /cygnett-park-di-arch-lucknow/unit-overview
+
+
+
+#Redirect 301 /nepal-hotels/cygnett-inn-krishna-nepalgunj-nepal/stay /cygnett-inn-krishna-nepalgunj/unit-accomodation
+#Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal/offer /cygnett-inn-krishna-nepalgunj/unit-offers
+#Redirect 301 /nepal-hotels/cygnett-inn-krishna-nepalgunj-nepal/dining /cygnett-inn-krishna-nepalgunj/unit-dining
+#Redirect 301 /nepal-hotels/cygnett-inn-krishna-nepalgunj-nepal/meeting-and-events /cygnett-inn-krishna-nepalgunj/unit-meetings-and-events
+#Redirect 301 /nepal-hotels/cygnett-inn-krishna-nepalgunj-nepal/gallery /cygnett-inn-krishna-nepalgunj/unit-gallery
+#Redirect 301 /nepal-hotels/cygnett-inn-krishna-nepalgunj-nepal/contact-us /cygnett-inn-krishna-nepalgunj/unit-overview
+
+
+Redirect 301 /cygnettlitehotels.com/exp-lite.php /
+Redirect 301 /cygnettlitehotels.com/include/header.php25072019 /
+Redirect 301 /cygnettlitehotels.com/include/footer13112018.php /
+Redirect 301 /cygnettlitehotels.com/include/footer13112018.php /
+Redirect 301 /cygnettlitehotels.com/include/menu-10119.php /
+Redirect 301 /cygnettlitehotels.com/include/footer-14012020.php /
+Redirect 301 /cygnettlitehotels.com/include/footer-n.php /
+Redirect 301 /cygnettlitehotels.com/include/header05112018.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-ballerina-tinsukia.php /
+Redirect 301 /cygnettlitehotels.com/index-17-02-2020.html /
+Redirect 301 /cygnettlitehotels.com/index-13-02-2020.html /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-digha-contact.php /hotels-in-digha
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-digha-gallery.php /hotels-in-digha
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-ballerina-tinsukia-dining.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-asia-shripati-katra.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-ballerina-tinsukia-contact.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-ballerina-tinsukia-accomodation.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-grand-jaipur-gallery.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-ballerina-tinsukia-gallery.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-shiraz-kolkata-gallery.php /siamton-inn-elect-kolkata/unit-overview
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-grand-jaipur-contact.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-asia-shripati-katra-contact.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-asia-shripati-katra-accomodation.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-ballerina-tinsukia-meetings-events.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-asia-shripati-katra-meetings-events.php /
+
+
+Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal.php/vision-mission.php /vision-mission.php
+
+
+Redirect 301 /visakhapatnam-hotels/cygnett-lite-ramachandra-visakhapatnam/stay /cygnett-inn-ramachandra-vizag/unit-accomodation
+Redirect 301 /visakhapatnam-hotels/cygnett-lite-ramachandra-visakhapatnam/gallery /cygnett-inn-ramachandra-vizag/unit-gallery
+Redirect 301 /visakhapatnam-hotels/cygnett-lite-ramachandra-visakhapatnam/contact-us /cygnett-inn-ramachandra-vizag/unit-overview
+Redirect 301 /visakhapatnam-hotels /cygnett-lite-ramachandra-visakhapatnam.php/cygnett-inn-ramachandra-vizag/unit-overview
+Redirect 301 /visakhapatnam-hotels/cygnett-lite-ramachandra-visakhapatnam/dining /cygnett-inn-ramachandra-vizag/unit-dining
+Redirect 301 /visakhapatnam-hotels/cygnett-lite-ramachandra-visakhapatnam/meeting-and-events /cygnett-inn-ramachandra-vizag/unit-meetings-and-events
+
+Redirect 301 goa-hotels/cygnett-lite-celestiial-goa/offer /cygnett-inn-celestiial-goa/unit-offers
+Redirect 301 /katra-hotels/cygnett-lite-asia-shripati-katra/offer /offers.php
+Redirect 301 /nawanshahar-hotels/cygnett-inn-nawanshahar/offer /offers.php
+Redirect 301 /visakhapatnam-hotels/cygnett-lite-ramachandra-visakhapatnam/offer /cygnett-inn-ramachandra-vizag/unit-offers
+
+
+
+Redirect 301 /goa-hotels/cygnett-lite-celestiial-goa/ /cygnett-inn-celestiial-goa/unit-overview
+
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-ramachandra-visakhapatnam.php /cygnett-inn-ramachandra-vizag/unit-overview
+
+
+Redirect 301 /landingpage/mountain-breeze-landing-page.html /mountain-breeze-nainital
+
+Redirect 301 /aboutus.php/index.php /aboutus.php
+Redirect 301 /aboutus.php/aboutus.php /aboutus.php
+Redirect 301 /aboutus.php/safety.php /safety.php
+Redirect 301 /aboutus.php/overview.php /aboutus.php
+Redirect 301 /aboutus.php/cuisine.php /
+Redirect 301 /aboutus.php/hotels-in-digha.php /hotels-in-digha
+Redirect 301 /hotels-in-digha.php /hotels-in-digha
+Redirect 301 /partner-with-us.php/jameson-inn /
+Redirect 301 /partner-with-us.php/hotels-in-jim-corbett.php /
+Redirect 301 /partner-with-us.php/jameson-inn /
+Redirect 301 /cygnett-lite-digha.php/index.php /
+Redirect 301 /cygnett-inn-repose-guwahati.php/index.php /
+Redirect 301 /cygnettlitehotels.com/contact.php /contact-us.php
+Redirect 301 /cygnettlitehotels.com/exp-lite.html /
+Redirect 301 /cygnettlitehotels.com/offers.php /offers.php
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-sonipat-accomodation.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-sonipat.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-sonipat-dining.php /
+Redirect 301 /cygnett-lite-celestiial-goa.php/index.php /cygnett-inn-celestiial-goa/unit-overview
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-celestiial-goa.php /cygnett-inn-celestiial-goa/unit-overview
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-celestiial-goa-contact.php /cygnett-inn-celestiial-goa/unit-overview
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-celestiial-goa-accomodation.php /cygnett-inn-celestiial-goa/unit-accomodation
+
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-alwar-rajasthan-contact.php /cygnett-lite-alwar/unit-overview
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-alwar-rajasthan-dining.php /cygnett-lite-alwar/unit-dining
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-alwar-rajasthan.php /cygnett-lite-alwar/unit-overview
+
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-grand-jaipur-meetings-events.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-grand-jaipur-dining.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-grand-jaipur.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-ramachandra-visakhapatnam-accomodation.php /cygnett-inn-ramachandra-vizag/unit-accomodation
+
+
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-ramachandra-visakhapatnam-contact.php /cygnett-inn-ramachandra-vizag/unit-overview
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-digha-accomodation.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-digha-meetings-events.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-digha-dining.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-digha.php /
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-shiraz-kolkata-accomodation.php /siamton-inn-elect-kolkata/unit-accomodation
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-shiraz-kolkata-meetings-events.php /siamton-inn-elect-kolkata/unit-meetings-and-events
+
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-shiraz-kolkata-dining.php /siamton-inn-elect-kolkata/unit-dining
+
+
+#---------------new rules as per the new site------------------------------#
+
+Redirect 301 /cygnett-lite-celestiial-goa.php/index.php /cygnett-inn-celestiial-goa/unit-overview
+Redirect 301 /cygnett-inn-celestiial-goa.php /cygnett-inn-celestiial-goa/unit-overview
+
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-celestiial-goa.php /cygnett-inn-celestiial-goa/unit-overview
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-celestiial-goa-contact.php /cygnett-inn-celestiial-goa/unit-overview
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-celestiial-goa-accomodation.php /cygnett-inn-celestiial-goa/unit-accomodation
+
+#Alwar
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-alwar-rajasthan-contact.php /cygnett-lite-alwar/unit-overview
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-alwar-rajasthan-dining.php /cygnett-lite-alwar/unit-dining
+Redirect 301 /cygnettlitehotels.com/cygnett-lite-alwar-rajasthan.php /cygnett-lite-alwar/unit-overview
+Redirect 301 /cygnett-lite-alwar-rajasthan-contact.php /cygnett-lite-alwar/unit-overview
+Redirect 301 /cygnett-lite-alwar-rajasthan-dining.php /cygnett-lite-alwar/unit-dining
+Redirect 301 /cygnett-lite-alwar-rajasthan.php /cygnett-lite-alwar/unit-overview
+Redirect 301 /cygnett-lite-alwar-rajasthan-accomodation.php /cygnett-lite-alwar/unit-accomodation
+Redirect 301 /cygnett-lite-alwar-offers.php /cygnett-lite-alwar/unit-offers
+Redirect 301 /cygnett-lite-alwar-rajasthan-meetings-events.php /cygnett-lite-alwar/unit-overview
+Redirect 301 /cygnett-lite-alwar-rajasthan-gallery.php /cygnett-lite-alwar/unit-gallery
+#Alwar
+
+#DIgha
+Redirect 301 /cygnett-lite-digha.php /hotels-in-digha
+Redirect 301 /cygnett-lite-digha-accomodation.php /hotels-in-digha
+Redirect 301 /cygnett-lite-digha-offers.php /hotels-in-digha
+Redirect 301 /cygnett-lite-digha-dining.php /hotels-in-digha
+Redirect 301 /cygnett-lite-digha-meetings-events.php /hotels-in-digha
+Redirect 301 /cygnett-lite-digha-contact.php /hotels-in-digha
+Redirect 301 /cygnett-lite-digha-gallery.php /hotels-in-digha
+#DIgha
+
+
+#Sea view digha
+Redirect 301 /cygnett-inn-sea-view-digha.php /cygnett-inn-sea-view-digha/unit-overview
+Redirect 301 /cygnett-inn-sea-view-digha-contact.php /cygnett-inn-sea-view-digha/unit-overview
+Redirect 301 /cygnett-inn-sea-view-digha-accomodation.php /cygnett-inn-sea-view-digha/unit-accomodation
+Redirect 301 /cygnett-inn-sea-view-digha-offers.php /cygnett-inn-sea-view-digha/unit-offers
+Redirect 301 /cygnett-inn-sea-view-digha-dining.php /cygnett-inn-sea-view-digha/unit-dining
+Redirect 301 /cygnett-inn-sea-view-digha-meetings-events.php /cygnett-inn-sea-view-digha/unit-meetings-and-events
+Redirect 301 /cygnett-inn-sea-view-digha-gallery.php /cygnett-inn-sea-view-digha/unit-gallery
+#Sea view digha
+
+#Dwarka
+Redirect 301 /cygnett-lite-dwarka.php /
+Redirect 301 /cygnett-lite-dwarka-accomodation.php /
+Redirect 301 /cygnett-lite-dwarka-offers.php /
+Redirect 301 /cygnett-lite-dwarka-dining.php /
+Redirect 301 /cygnett-lite-dwarka-meetings-events.php /
+Redirect 301 /cygnett-lite-dwarka-contact.php /
+Redirect 301 /cygnett-lite-dwarka-gallery.php /
+Redirect 301 /cygnett-inn-dwarka-accomodation.php /
+Redirect 301 /cygnett-inn-dwarka-offers.php /
+Redirect 301 /cygnett-inn-dwarka-contact.php /
+Redirect 301 /cygnett-inn-dwarka-gallery.php /
+#Dwarka
+
+#Gangtok
+Redirect 301 /cygnett-inn-la-maison-gangtok.php /cygnett-inn-la-maison-gangtok/unit-overview
+Redirect 301 /cygnett-inn-la-maison-gangtok-accomodations.php /cygnett-inn-la-maison-gangtok/unit-accomodation
+Redirect 301 /cygnett-inn-la-maison-gangtok-offers.php /cygnett-inn-la-maison-gangtok/unit-offers
+Redirect 301 /cygnett-inn-la-maison-gangtok-dining.php /cygnett-inn-la-maison-gangtok/unit-dining
+Redirect 301 /cygnett-inn-la-maison-gangtok-meetings-events.php /cygnett-inn-la-maison-gangtok/unit-meetings-and-events
+Redirect 301 /cygnett-inn-la-maison-gangtok-contact.php /cygnett-inn-la-maison-gangtok/unit-overview
+Redirect 301 /cygnett-inn-la-maison-gangtok-gallery.php /cygnett-inn-la-maison-gangtok/unit-gallery
+#Gangtok
+
+#Goa
+Redirect 301 /cygnett-inn-celestiial-goa.php /cygnett-inn-celestiial-goa/unit-overview
+Redirect 301 /cygnett-inn-celestiial-goa-accomodation.php /cygnett-inn-celestiial-goa/unit-accomodation
+Redirect 301 /cygnett-inn-celestiial-goa-offers.php /cygnett-inn-celestiial-goa/unit-offers
+Redirect 301 /cygnett-inn-celestiial-goa-dining.php /cygnett-inn-celestiial-goa/unit-dining
+Redirect 301 /cygnett-inn-celestiial-goa-meetings-events.php /cygnett-inn-celestiial-goa/unit-meetings-and-events
+Redirect 301 /cygnett-inn-celestiial-goa-contact.php /cygnett-inn-celestiial-goa/unit-overview
+Redirect 301 /cygnett-inn-celestiial-goa-gallery.php /cygnett-inn-celestiial-goa/unit-gallery
+#Goa
+
+#itanagar
+Redirect 301 /cygnett-inn-trendz-itanagar.php /cygnett-inn-trendz-itanagar/unit-overview
+Redirect 301 /cygnett-inn-trendz-itanagar-accomodations.php /cygnett-inn-trendz-itanagar/unit-accomodation
+Redirect 301 /cygnett-inn-trendz-itanagar-offers.php /cygnett-inn-trendz-itanagar/unit-offers
+Redirect 301 /cygnett-inn-trendz-itanagar-dining.php /cygnett-inn-trendz-itanagar/unit-dining
+Redirect 301 /cygnett-inn-trendz-itanagar-meetings-events.php /cygnett-inn-trendz-itanagar/unit-meetings-and-events
+Redirect 301 /cygnett-inn-trendz-itanagar-contact.php /cygnett-inn-trendz-itanagar/unit-overview
+Redirect 301 /cygnett-inn-trendz-itanagar-gallery.php /cygnett-inn-trendz-itanagar/unit-gallery
+#itanagar
+
+
+#jaipur
+Redirect 301 /cygnett-lite-grand-jaipur.php /
+Redirect 301 /cygnett-lite-grand-jaipur-accomodation.php /
+Redirect 301 /cygnett-lite-grand-jaipur-offers.php /
+Redirect 301 /cygnett-lite-grand-jaipur-dining.php /
+Redirect 301 /cygnett-lite-grand-jaipur-meetings-events.php /
+Redirect 301 /cygnett-lite-grand-jaipur-contact.php /
+Redirect 301 /cygnett-lite-grand-jaipur-gallery.php /
+#jaipur
+
+
+#jodhpur
+Redirect 301 /cygnett-style-mantra-jodhpur.php /
+Redirect 301 /cygnett-style-mantra-jodhpur-accomodations.php /
+Redirect 301 /cygnett-style-mantra-jodhpur-offers.php /
+Redirect 301 /cygnett-style-mantra-jodhpur-dining.php /
+Redirect 301 /cygnett-style-mantra-jodhpur-meetings-events.php /
+Redirect 301 /cygnett-style-mantra-jodhpur-contact.php /
+Redirect 301 /cygnett-style-mantra-jodhpur-gallery.php /
+#jodhpur
+
+#lucknow
+Redirect 301 /cygnett-park-lucknow.php /cygnett-park-di-arch-lucknow/unit-overview
+Redirect 301 /cygnett-park-lucknow-accomodation.php /cygnett-park-di-arch-lucknow/unit-accomodation
+Redirect 301 /cygnett-park-lucknow-offers.php /cygnett-park-di-arch-lucknow/unit-offers
+Redirect 301 /cygnett-park-lucknow-dining.php /cygnett-park-di-arch-lucknow/unit-dining
+Redirect 301 /cygnett-park-lucknow-meetings-events.php /cygnett-park-di-arch-lucknow/unit-meetings-and-events
+Redirect 301 /cygnett-park-lucknow-contact.php /cygnett-park-di-arch-lucknow/unit-overview
+Redirect 301 /cygnett-park-lucknow-gallery.php /cygnett-park-di-arch-lucknow/unit-gallery
+#lucknow
+
+#mcleodganj
+
+Redirect 301 /cygnett-style-signature-mcleodganj/unit-overview/team.php /team.php
+
+Redirect 301 /cygnett-style-signature-mcleodganj/unit-overview/cygnett-style-signature-mcleodganj.php /cygnett-style-signature-mcleodganj/unit-overview
+
+Redirect 301 /cygnett-style-signature-mcleodganj.php/overview.php /cygnett-style-signature-mcleodganj/unit-overview
+
+
+Redirect 301 /cygnett-style-signature-mcleodganj.php/cuisine.php /cygnett-style-signature-mcleodganj/unit-dining
+
+Redirect 301 /cygnett-style-signature-mcleodganj.php/aboutus.php /cygnett-style-signature-mcleodganj/unit-overview
+
+Redirect 301 /cygnett-style-signature-mcleodganj.php/vision-mission.php /vision-mission.php
+
+Redirect 301 /cygnett-style-signature-mcleodganj.php /cygnett-style-signature-mcleodganj/unit-overview
+Redirect 301 /cygnett-style-signature-mcleodganj-accomodation.php /cygnett-style-signature-mcleodganj/unit-accomodation
+Redirect 301 /cygnett-style-signature-mcleodganj-offers.php /cygnett-style-signature-mcleodganj/unit-offers
+Redirect 301 /cygnett-style-signature-mcleodganj-dining.php /cygnett-style-signature-mcleodganj/unit-dining
+Redirect 301 /cygnett-style-signature-mcleodganj-meetings-events.php /cygnett-style-signature-mcleodganj/unit-meetings-and-events
+Redirect 301 /cygnett-style-signature-mcleodganj-contact.php /cygnett-style-signature-mcleodganj/unit-overview
+Redirect 301 /cygnett-style-signature-mcleodganj-gallery.php /cygnett-style-signature-mcleodganj/unit-gallery
+
+
+
+#mcleodganj
+
+#nainital
+
+Redirect 301 /cygnett-resort-mountain-breeze-nainital.php/overview.php /overview.php
+
+Redirect 301 /cygnett-resort-mountain-breeze-nainital/unit-overview/hotels-in-digha.php /hotels-in-digha
+
+Redirect 301 /cygnett-resort-mountain-breeze-nainital.php /cygnett-resort-mountain-breeze-nainital/unit-overview
+Redirect 301 /cygnett-resort-mountain-breeze-nainital-accomodation.php /cygnett-resort-mountain-breeze-nainital/unit-accomodation
+Redirect 301 /cygnett-resort-mountain-breeze-nainital-offers.php /cygnett-resort-mountain-breeze-nainital/unit-offers
+Redirect 301 /cygnett-resort-mountain-breeze-nainital-dining.php /cygnett-resort-mountain-breeze-nainital/unit-dining
+Redirect 301 /cygnett-resort-mountain-breeze-nainital-meetings-events.php /cygnett-resort-mountain-breeze-nainital/unit-meetings-and-events
+Redirect 301 /cygnett-resort-mountain-breeze-nainital-contact.php /cygnett-resort-mountain-breeze-nainital/unit-overview
+Redirect 301 /cygnett-resort-mountain-breeze-nainital-gallery.php /cygnett-resort-mountain-breeze-nainital/unit-gallery
+
+Redirect 301 /cygnett-resort-mountain-breeze-offers.php /cygnett-resort-mountain-breeze-nainital/unit-offers
+#nainital
+
+#nepalgunj
+Redirect 301 /cygnett-inn-krishna-nepalgunj/unit-overview/cygnett-inn-celestiial-goa.php /cygnett-inn-celestiial-goa/unit-overview
+
+Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal.php/team.php /team.php
+Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal.php/overview.php /cygnett-inn-krishna-nepalgunj/unit-overview
+
+
+Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal.php /cygnett-inn-krishna-nepalgunj/unit-overview
+Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal-accomodation.php /cygnett-inn-krishna-nepalgunj/unit-accomodation
+Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal-offers.php /cygnett-inn-krishna-nepalgunj/unit-offers
+Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal-dining.php /cygnett-inn-krishna-nepalgunj/unit-dining
+Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal-meetings-events.php /cygnett-inn-krishna-nepalgunj/unit-meetings-and-events
+Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal-contact.php /cygnett-inn-krishna-nepalgunj/unit-overview
+Redirect 301 /cygnett-inn-krishna-nepalgunj-nepal-gallery.php /cygnett-inn-krishna-nepalgunj/unit-gallery
+#nepalgunj
+
+#siliguri
+Redirect 301 /cygnett-style-tanias-siliguri.php /cygnett-style-tanias-siliguri/unit-overview
+Redirect 301 /cygnett-style-tanias-siliguri-accomodation.php /cygnett-style-tanias-siliguri/unit-accomodation
+Redirect 301 /cygnett-style-tanias-siliguri-offers.php /cygnett-style-tanias-siliguri/unit-offers
+Redirect 301 /cygnett-style-tanias-siliguri-dining.php /cygnett-style-tanias-siliguri/unit-dining
+Redirect 301 /cygnett-style-tanias-siliguri-meetings-events.php /cygnett-style-tanias-siliguri/unit-meetings-and-events
+Redirect 301 /cygnett-style-tanias-siliguri-contact.php /cygnett-style-tanias-siliguri/unit-overview
+Redirect 301 /cygnett-style-tanias-siliguri-gallery.php /cygnett-style-tanias-siliguri/unit-gallery
+#siliguri
+
+#vizag
+Redirect 301 /cygnett-inn-ramachandra-visakhapatnam.php /cygnett-inn-ramachandra-vizag/unit-overview
+Redirect 301 /cygnett-inn-ramachandra-visakhapatnam-accomodation.php /cygnett-inn-ramachandra-vizag/unit-accomodation
+Redirect 301 /cygnett-inn-ramachandra-visakhapatnam-offers.php /cygnett-inn-ramachandra-vizag/unit-offers
+Redirect 301 /cygnett-inn-ramachandra-visakhapatnam-dining.php /cygnett-inn-ramachandra-vizag/unit-dining
+Redirect 301 /cygnett-inn-ramachandra-visakhapatnam-meetings-events.php /cygnett-inn-ramachandra-vizag/unit-meetings-and-events
+Redirect 301 /cygnett-inn-ramachandra-visakhapatnam-contact.php /cygnett-inn-ramachandra-vizag/unit-overview
+Redirect 301 /cygnett-inn-ramachandra-visakhapatnam-gallery.php /cygnett-inn-ramachandra-vizag/unit-gallery
+#vizag
+
+#Bongaigaon
+
+Redirect 301 /cygnett-park-meghna-bongaigaon.php/guest-review.php /guest-review.php
+
+Redirect 301 /cygnett-park-meghna-bongaigaon/unit-meetings-and-events/core-values.php /core-values.php
+
+Redirect 301 /cygnett-park-meghna-bongaigaon.php /cygnett-park-meghna-bongaigaon/unit-overview
+Redirect 301 /cygnett-park-meghna-bongaigaon-accomodation.php /cygnett-park-meghna-bongaigaon/unit-accomodation
+Redirect 301 /cygnett-park-meghna-bongaigaon-offers.php /cygnett-park-meghna-bongaigaon/unit-offers
+Redirect 301 /cygnett-park-meghna-bongaigaon-dining.php /cygnett-park-meghna-bongaigaon/unit-dining
+Redirect 301 /cygnett-park-meghna-bongaigaon-meetings-events.php /cygnett-park-meghna-bongaigaon/unit-meetings-and-events
+Redirect 301 /cygnett-park-meghna-bongaigaon-contact.php /cygnett-park-meghna-bongaigaon/unit-overview
+Redirect 301 /cygnett-park-meghna-bongaigaon-gallery.php /cygnett-park-meghna-bongaigaon/unit-gallery
+#Bongaigaon
+
+
+#Repose
+Redirect 301 //hotels-in-jim-corbett.php /
+Redirect 301 /cygnett-inn-guwahati/unit-overview/hotels-in-jim-corbett.php /
+
+Redirect 301 /cygnett-inn-repose-guwahati.php/team.php /team.php
+
+Redirect 301 /cygnett-inn-repose-guwahati.php /cygnett-inn-guwahati/unit-overview
+Redirect 301 /cygnett-inn-repose-guwahati-accomodation.php /cygnett-inn-guwahati/unit-accomodation
+Redirect 301 /cygnett-inn-repose-guwahati-offers.php /cygnett-inn-guwahati/unit-offers
+Redirect 301 /cygnett-inn-repose-guwahati-dining.php /cygnett-inn-guwahati/unit-dining
+Redirect 301 /cygnett-inn-repose-guwahati-meetings-events.php /cygnett-inn-guwahati/unit-meetings-and-events
+Redirect 301 /cygnett-inn-repose-guwahati-contact.php /cygnett-inn-guwahati/unit-overview
+Redirect 301 /cygnett-inn-repose-guwahati-gallery.php /cygnett-inn-guwahati/unit-gallery
+#Repose
+
+
+Redirect 301 /upcoming-hotels.php /new-and-upcoming-hotels
+Redirect 301 /brands-cygnett-residences.php /brands/details/cygnett-residences/MTM=
+Redirect 301 /brands-cygnett-inn.php /brands/details/cygnett-inn/MTE=
+
+Redirect 301 /cygnett-inn-shiraz-kolkata.php /siamton-inn-elect-kolkata/unit-overview
+
+Redirect 301 /hotels-in-alwar-test.php /hotels-in-alwar
+
+Redirect 301 /cygnett-inn-celestiial-offers.php /cygnett-inn-celestiial-goa/unit-offers
+
+Redirect 301 /hotel-listing.php /our-hotels
+
+Redirect 301 /cygnett-inn-dwarka.php/team.php /team.php
+
+Redirect 301 /cygnett-style-signature-mcleodganj.php/team.php /team.php
+
+Redirect 301 /cygnett-inn-dwarka.php/core-values.php /core-values.php
+
+#Redirect 301 /cygnett-style-signature-mcleodganj.php/cuisine.php /cygnett-style-signature-mcleodganj/unit-dining
+
+Redirect 301 /cygnett-inn-dwarka.php/vision-mission.php /vision-mission.php
+
+
+
+#---------------new rules as per the new site------------------------------#
+
+
+#redirection rules as was directed by barnali madam
+Redirect 301 /cozzetstay.com https://www.cozzethotels.com
+Redirect 301 /cozzetstay.com/cozzet-stay-amritsar-accomodation.php https://www.cozzethotels.com/cozzet-stay-amritsar-accomodation.php
+Redirect 301 /cozzetstay.com/cozzet-stay-amritsar.php https://www.cozzethotels.com/cozzet-stay-amritsar.php
+Redirect 301 /cozzetstay.com/cozzet-stay-amritsar-dining.php https://www.cozzethotels.com/cozzet-stay-amritsar-dining.php
+Redirect 301 /cozzetstay.com/cozzet-stay-amritsar-gallery.php https://www.cozzethotels.com/cozzet-stay-amritsar-gallery.php
+Redirect 301 /cozzetstay.com/cozzet-stay-amritsar-contact.php https://www.cozzethotels.com/cozzet-stay-amritsar-contact.php
+#redirection rules as was directed by barnali madam
+
+#redirection rules for ayurvyaas
+Redirect 301 /ayurvyaas.com/ https://www.ayurvyaas.com
+
+#redirection for cygnetthotels.net/
+Redirect 301 /cygnetthotels.net/ https://www.cygnetthotels.net/
+
+#redirection for cygnettlitehotels.com
+Redirect 301 /cygnettlitehotels.com/ https://www.cygnettlitehotels.com/
+
+
+
+
+#kolkata - from cygnett to cozzet
+#was done via page level
+#kolkata - from cygnett to cozzet
+
+php_value upload_max_filesize 40M
+
+php_value post_max_size 42M
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+## EXPIRES CACHING ##
+
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>
+<ifmodule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+  # Remove browser bugs (only needed for really old browsers)
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</ifmodule>
+
+
+
+
+
+
+
